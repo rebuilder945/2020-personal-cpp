@@ -19,8 +19,3 @@ jobs:
         arch: x86
     - run: |
         msbuild /p:Configuration=Release
-        Release/GHAnalysis.exe
-    - uses: actions/upload-artifact@v2
-      with:
-        name: GHAnalysis
-        path: Release/GHAnalysis.exe
