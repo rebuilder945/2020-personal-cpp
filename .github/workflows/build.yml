@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build
 
 on:
   push:
@@ -17,9 +17,7 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1
       with: 
         toolset: 14.26
-        sdk: 10.0.19041.0
         arch: x86
-        uwp: false
     - run: |
         msbuild /p:Configuration=Release
         Release/GHAnalysis.exe
