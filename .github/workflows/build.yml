@@ -17,5 +17,7 @@ jobs:
     - uses: ilammy/msvc-dev-cmd@v1
       with: 
         arch: x86
-    - run: |
-        msbuild /p:Configuration=Release
+    - name: Build
+      run: msbuild /p:Configuration=Release
+    - name: Run
+      run: Release/GHAnalysis.exe
